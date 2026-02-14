@@ -42,7 +42,7 @@ a {
 #clock-box {
 	position: absolute;
 	left: 60px;
-	top: 560px; /* 🔥 ajustado justo arriba de la línea */
+	top: 560px;
 	font-size: 24px;
 	display: none;
 }
@@ -85,4 +85,18 @@ a {
 
 .space {
 	margin-right: 150px;
+}
+
+@media screen and (max-width: 768px) {
+
+	#wrap {
+		transform: scale(0.65);
+		transform-origin: top left;
+		width: 1100px;
+		height: 680px;
+	}
+
+	body {
+		overflow-x: hidden;
+	}
 }
