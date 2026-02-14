@@ -5,10 +5,7 @@
     <title>Te amo sofi💖</title>
     <link rel="icon" type="image/x-icon" href="Love_files/icon.png">
     <meta name="language" content="es-ES">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
-
     <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
     <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
     <script type="text/javascript" src="./Love_files/jscex-parser.js"></script>
@@ -23,11 +20,11 @@
 <body>
     <div id="main">
         <div id="error">
-            Tu navegador no es compatible. Usa Chrome o Firefox.
+            Tu navegador que estás usando no es compatible con el contenido que se va a mostrar. 
+            Por favor, usa Google Chrome o Firefox.
         </div>
 
         <div id="wrap">
-
             <div id="text">
                 <div id="code">
                     <span class="say">Para mi hermosa Sofía:</span><br><br>
@@ -37,11 +34,11 @@
                     </span><br>
 
                     <span class="say">
-                        Gracias por llenar mis días de amor y felicidad.
+                        Gracias por llenar mis días de amor, sonrisas y felicidad.
                     </span><br>
 
                     <span class="say">
-                        Te elegiría una y mil veces más.
+                        Te elegiría hoy, mañana y siempre.
                     </span><br><br>
 
                     <span class="say">
@@ -56,34 +53,9 @@
             </div>
 
             <canvas id="canvas" width="1100" height="680"></canvas>
-
         </div>
     </div>
 
-<script>
-
-function actualizarContador() {
-    var fechaInicio = new Date("2021-05-24T00:00:00");
-    var ahora = new Date();
-
-    var diferencia = ahora - fechaInicio;
-
-    var dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    var horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
-    var minutos = Math.floor((diferencia / (1000 * 60)) % 60);
-    var segundos = Math.floor((diferencia / 1000) % 60);
-
-    document.getElementById("clock").innerHTML =
-        dias + " días " +
-        horas + " horas " +
-        minutos + " minutos " +
-        segundos + " segundos";
-}
-
-setInterval(actualizarContador, 1000);
-actualizarContador();
-
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
