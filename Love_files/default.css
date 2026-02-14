@@ -5,7 +5,7 @@ body {
 	font-size: 20px;
 	font-family: '微软雅黑', '宋体', sans-serif;
 	color: #5C4033;
-	overflow: auto;
+	overflow-x: hidden;
 }
 
 a {
@@ -21,8 +21,8 @@ a {
 	position: relative;
 	margin: 0 auto;
 	width: 1100px;
-	height: 720px;
-	margin-top: 100px;
+	min-height: 680px;
+	margin-top: 40px;
 }
 
 #text {
@@ -35,19 +35,20 @@ a {
 
 #code {
 	display: none;
-	font-size: 28px;
+	font-size: 24px;
+	line-height: 1.4em;
 }
 
 #clock-box {
 	position: absolute;
 	left: 60px;
-	top: 660px;
-	font-size: 28px;
+	top: 520px;
+	font-size: 24px;
 	display: none;
 }
 
 #clock-box a {
-	font-size: 28px;
+	font-size: 24px;
 	text-decoration: none;
 }
 
@@ -56,10 +57,12 @@ a {
 }
 
 #clock .digit {
-	font-size: 40px;
+	font-size: 32px;
 }
 
 #canvas {
+	position: relative;
+	display: block;
 	margin: 0 auto;
 	width: 1100px;
 	height: 680px;
