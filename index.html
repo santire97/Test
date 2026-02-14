@@ -49,3 +49,42 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+/* 🔧 ARREGLO TEXTO AMONTONADO */
+#clock-box {
+    position: relative !important;
+    margin-top: 25px !important;
+    padding-top: 15px;
+    border-top: 2px solid #3b2f2f;
+    clear: both;
+}
+
+#clock {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* 📱 Ajuste para celular */
+@media screen and (max-width: 768px) {
+
+    #wrap {
+        width: 95% !important;
+        margin: 0 auto;
+    }
+
+    #text {
+        width: 100% !important;
+        float: none !important;
+    }
+
+    #clock-box {
+        width: 100% !important;
+        text-align: left;
+    }
+
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
