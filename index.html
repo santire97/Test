@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Te amo sofi💖</title>
     <link rel="icon" type="image/x-icon" href="Love_files/icon.png">
-    <meta name="language" content="es-ES">
     <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
     <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
     <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
@@ -18,64 +17,74 @@
     <script type="text/javascript" src="./Love_files/love.js"></script>
 
     <style>
+        body { margin: 0; padding: 0; font-family: sans-serif; background: #000; color: #fff; }
+        #main { min-height: 100vh; }
+        #wrap {
+            position: relative;
+            max-width: 1100px;
+            width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #text, #clock-box {
+            position: static; /* quita absolute para que fluya normal */
+            width: 100%;
+            text-align: center;
+        }
         #code {
+            font-size: 22px;
             line-height: 1.8;
-            letter-spacing: 0.5px;
-            word-spacing: 1px;
+            letter-spacing: 0.6px;
+            word-break: break-word;
             overflow-wrap: break-word;
             hyphens: auto;
             white-space: normal;
             max-width: 90%;
-            margin: 0 auto;
-            padding: 20px 10px;
-            text-align: center;
-            font-size: 20px;
+            margin: 0 auto 30px;
+            padding: 0 10px;
         }
         .say {
-            display: inline-block;
+            display: block;
+            margin: 12px 0;
         }
         #clock-box {
-            text-align: center;
+            font-size: 20px;
             margin: 20px auto;
-            max-width: 90%;
         }
         canvas {
             display: block;
-            margin: 0 auto;
             max-width: 100%;
             height: auto;
+            margin: 0 auto;
         }
         @media (max-width: 768px) {
-            #code {
-                font-size: 18px;
-                line-height: 1.9;
-                padding: 10px 5px;
-            }
-            .say {
-                display: inline-block;
-            }
+            #code { font-size: 18px; line-height: 2.0; }
+            #clock-box { font-size: 18px; }
+            #wrap { padding: 10px; margin: 10px auto; }
+        }
+        @media (max-width: 480px) {
+            #code { font-size: 16px; line-height: 2.1; }
         }
     </style>
 </head>
-
 <body>
     <div id="main">
-        <div id="error">
-            Tu navegador que estás usando no es compatible con el contenido que se va a mostrar. 
-            Por favor, usa Google Chrome o Firefox.
+        <div id="error" style="display:none;">
+            Tu navegador no es compatible. Usa Chrome o Firefox.
         </div>
 
         <div id="wrap">
             <div id="text">
                 <div id="code">
-                    <span class="say">Para mi hermosa Sofía:</span><br><br>
-                    <span class="say">Desde aquel 24 de mayo de 2021, mi vida tiene un antes y un después.</span><br>
-                    <span class="say">Contigo aprendí que el amor verdadero se siente en los detalles pequeños.</span><br>
-                    <span class="say">Tu sonrisa es mi lugar favorito y tus risas la melodía que alegra mi corazón.</span><br>
-                    <span class="say">Cada día a tu lado es un regalo que agradezco infinitamente.</span><br>
-                    <span class="say">Si volviera a nacer, volvería a buscarte.</span><br>
-                    <span class="say">Y si tuviera que elegir mil veces… siempre te elegiría a ti.</span><br><br>
-                    <span class="say"><span class="space"></span> — Te amo más de lo que las palabras pueden explicar 💖</span>
+                    <span class="say">Para mi hermosa Sofía:</span>
+                    <span class="say">Desde aquel 24 de mayo de 2021, mi vida tiene un antes y un después.</span>
+                    <span class="say">Contigo aprendí que el amor verdadero se siente en los detalles pequeños.</span>
+                    <span class="say">Tu sonrisa es mi lugar favorito y tus risas la melodía que alegra mi corazón.</span>
+                    <span class="say">Cada día a tu lado es un regalo que agradezco infinitamente.</span>
+                    <span class="say">Si volviera a nacer, volvería a buscarte.</span>
+                    <span class="say">Y si tuviera que elegir mil veces… siempre te elegiría a ti.</span>
+                    <span class="say">— Te amo más de lo que las palabras pueden explicar 💖</span>
                 </div>
             </div>
 
@@ -87,6 +96,7 @@
             <canvas id="canvas" width="1100" height="680"></canvas>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
